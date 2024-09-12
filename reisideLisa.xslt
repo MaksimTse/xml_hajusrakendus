@@ -109,8 +109,9 @@
 							<th>Reisi number</th>
 							<th>Lennu Hind</th>
 							<th>Transport Hind</th>
-							<th>Lennu Sihtkoht</th>
+							<th>Lennu lähtekoht</th>
 							<th>Väljumine aeg</th>
+							<th>Lennu Sihtkoht</th>
 							<th>Saabumine aeg</th>
 						</tr>
 						<xsl:for-each select="Reisid/Reisi">
@@ -125,10 +126,13 @@
 									<xsl:value-of select="Lend/TransportHind"/>
 								</td>
 								<td>
-									<xsl:value-of select="Lend/Saabumine/Linn"/>
+									<xsl:value-of select="Lend/Valjumine/Linn" />
 								</td>
 								<td>
 									<xsl:value-of select="Lend/Valjumine/Aeg" />
+								</td>
+								<td>
+									<xsl:value-of select="Lend/Saabumine/Linn"/>
 								</td>
 								<td>
 									<xsl:value-of select="Lend/Saabumine/Aeg" />
